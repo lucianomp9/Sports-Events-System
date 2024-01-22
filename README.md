@@ -597,7 +597,7 @@ The Entity-Relationship model corresponding to the database is attached below.
 | uuid| `UUID` | By **URL**.  | 46940236-7a1a-4a40-9e13-18ca3dbad218
 
 
-- URL: localhost:8080/api/v1/match/{id}
+- URL: localhost:8080/api/v1/match/{uuid}
 - Method: GET
 - Response:
 
