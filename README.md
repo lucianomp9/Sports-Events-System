@@ -2,8 +2,6 @@
 
 REST API for the creation of sports events, using CRUD operations on matches, teams, stadiums, divisions, and cities. This API was programmed using Java and Spring Boot. Hibernate was used for object-relational mapping, and the database used was MySQL. Design patterns such as MVC, DTO, Repositories, Dependency Injection were used. Exception handling was also implemented.
 
-*(Front-end connection is currently in progress)* 
-
 ---
 ## Index
 - [Installation](#Installation)
@@ -655,3 +653,5 @@ The Entity-Relationship model corresponding to the database is attached below.
 
 ![image](https://github.com/lucianomp9/random/assets/86586819/2558d0ba-466f-48fb-a321-1f716baf1fd4)
 
+
+*(Front-end connection is currently in progress)* 
