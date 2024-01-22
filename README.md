@@ -1,8 +1,6 @@
-# Football Matches Api Rest CRUD
-Descripcion: 
-Java/Spring Boot REST API for sports events with CRUD on teams, stadiums, divisions, and cities. Uses MySQL and Hibernate for data management. Implements MVC, DTO, Repositories, and Dependency Injection, including exception handling.
+# Sports Events Api Rest CRUD
 
-REST API for the creation of sports events, using CRUD operations on teams, stadiums, divisions, and cities. This API was programmed using Java and Spring Boot. Hibernate was used for object-relational mapping, and the database used was MySQL. Design patterns such as MVC, DTO, Repositories, Dependency Injection were used. Exception handling was also implemented.
+REST API for the creation of sports events, using CRUD operations on matches, teams, stadiums, divisions, and cities. This API was programmed using Java and Spring Boot. Hibernate was used for object-relational mapping, and the database used was MySQL. Design patterns such as MVC, DTO, Repositories, Dependency Injection were used. Exception handling was also implemented.
 
 ---
 ## Index
