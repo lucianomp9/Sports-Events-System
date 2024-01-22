@@ -654,4 +654,5 @@ The Entity-Relationship model corresponding to the database is attached below.
 ![image](https://github.com/lucianomp9/random/assets/86586819/2558d0ba-466f-48fb-a321-1f716baf1fd4)
 
 
+---
 *(Front-end connection is currently in progress)* 
