@@ -70,7 +70,7 @@ src/main/resources/scripts/bd_script.sql
 Once you have configured the database and saved the changes in application.properties, you can run the application. Find the main class "MatchescrudApplication" (annotated with @SpringBootApplication) and click the run button in your development environment.
 
 ## ER Model
-The Entity-Relationship model corresponding to the database is attached below.
+The Entity-Relationship model corresponding to the database.
 
 ![ER Model](https://github.com/lucianomp9/Sports-Events-CRUD/assets/86586819/8409d484-4e3a-4c96-b276-697551988f5a)
 
