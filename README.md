@@ -45,7 +45,7 @@ Follow these steps to configure, install, and run the application. You must have
 
 ### Clone the Repository
 First, clone this repository to your local machine using the following command in your terminal:
-git clone https://github.com/lucianomp9/Sports-Events-CRUD.git
+``` git clone https://github.com/lucianomp9/Sports-Events-CRUD.git ```
 
 ### Open the Project in your Integrated Development Environment (IDE)
 
