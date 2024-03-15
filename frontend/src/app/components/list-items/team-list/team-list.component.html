@@ -5,6 +5,14 @@
   </p>
 </div>
 }@else {
+
+
+  <div class="order-btns-container flex justify-center">  <button (click)="toggleOrderBy()">
+    Sort teams by Name {{ orderByTeamName ? " (Descendant)" : " (Ascendant)" }}
+  </button>
+</div>
+
+
 <div class="team-lst mt-12">
   @for (singleTeam of teams; track singleTeam.id){
 

@@ -18,13 +18,29 @@ export class TeamListComponent implements OnInit {
   @Input() stadiums: Stadium[] = [];
   @Input() cities: City[] = [];
   @Input() divisions: Division[] = [];
+  orderByTeamName: boolean = true; 
   @Output() refreshHomeTeams: EventEmitter<void> = new EventEmitter<void>();
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.sortTeams();
+  }
 
   refreshTeams() {
     this.refreshHomeTeams.emit();
+  }
+
+  toggleOrderBy() {
+    this.orderByTeamName = !this.orderByTeamName;
+    this.sortTeams();
+  }
+
+  sortTeams() {
+    if(this.orderByTeamName){
+      this.teams.sort((a, b) => a.name.localeCompare(b.name)); // Sort by team name
+    }else{
+      this.teams.sort((b, a) => a.name.localeCompare(b.name));
+    }
   }
 }

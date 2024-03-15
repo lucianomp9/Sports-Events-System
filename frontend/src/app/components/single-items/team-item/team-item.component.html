@@ -18,6 +18,12 @@
       }
       <div class="pill pill-name">{{ team?.stadium?.name }}</div>
     </div>
+    <div class="info-row" [ngClass]="{ 'column-layout': isFirst }">
+      @if (isFirst) {
+      <strong>City</strong>
+      }
+      <div class="pill pill-name">{{ team?.city?.name }}</div>
+    </div>
   </div>
   <div class="btns mr-4 flex" [ngClass]="{ 'btn-margin': isFirst }">
     <button mat-raised-button class="icn-btn"  (click)="deleteTeam()">

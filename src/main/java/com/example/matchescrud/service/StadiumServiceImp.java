@@ -8,7 +8,6 @@ import com.example.matchescrud.exceptions.NotFoundExceptions.StadiumNotFoundExce
 import com.example.matchescrud.model.entity.Stadium;
 import com.example.matchescrud.repository.StadiumRepository;
 import com.example.matchescrud.service.interfaces.IStadiumService;
-import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
