@@ -46,6 +46,8 @@ button:hover {
   margin-left: 5px;
   border-radius: 50px;
   place-content: center;
+  min-width: 210px; /* Set minimum width */
+  max-width: 210px; /* Set maximum width */
 }
 
 .pill-event {
@@ -55,19 +57,16 @@ button:hover {
   white-space: nowrap; /* Prevent text wrapping by default */
   overflow: hidden; /* Hide overflowing text */
   text-overflow: ellipsis; /* Add ellipsis (...) for long text */
-  min-width: 190px; /* Set minimum width */
-  max-width: 190px; /* Set maximum width */
 }
 
-.pill-stadium{
+.pill-stadium {
   margin-left: 10px;
   display: flex; /* Enable flexbox for text wrapping */
   align-items: center; /* Vertically center text within the pill */
   white-space: nowrap; /* Prevent text wrapping by default */
   overflow: hidden; /* Hide overflowing text */
   text-overflow: ellipsis; /* Add ellipsis (...) for long text */
-  min-width: 190px; /* Set minimum width */
-  max-width: 190px; /* Set maximum width */
+
   background-color: rgba(87, 87, 87, 0.205);
 }
 .pill-date {
@@ -81,7 +80,7 @@ button:hover {
   flex-direction: column;
 }
 
-.info-row.column-layout strong{
+.info-row.column-layout strong {
   margin-bottom: 30px;
 }
 
