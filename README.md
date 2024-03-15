@@ -1,4 +1,4 @@
-# Sports Events CRUD System
+# ⚽ Sports Events CRUD System
 
 A CRUD system for managing sports events, implementing operations on matches, teams, stadiums, divisions, and cities. This system includes both backend REST API and a frontend application built with **Angular**.  
 The backend API is developed using **Java** and **Spring Boot**, with Hibernate for object-relational mapping. MySQL is used as the database. Design patterns such as MVC, DTO, Repositories, and Dependency Injection are implemented, along with exception handling.
