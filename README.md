@@ -676,5 +676,6 @@ Once the frontend application is running, you can access it through a web browse
 ### Features Display
 
 ##### Home Page
-![image](https://github.com/lucianomp9/Sports-Events-CRUD/assets/86586819/d586df09-8592-4c97-a3f4-ec985c509de3)
+![image](https://github.com/lucianomp9/Sports-Events-CRUD/assets/86586819/1cc89b68-fa8e-456f-8596-0b84b1e6abc4)
+
 
