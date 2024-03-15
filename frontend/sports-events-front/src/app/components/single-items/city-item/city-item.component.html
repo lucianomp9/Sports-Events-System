@@ -1,0 +1,16 @@
+<div class="mt-5 mb-2 flex justify-between">
+  <div class="city-info" [ngClass]="{ 'column-layout': isFirst }">
+    @if(isFirst){
+    <strong>Name</strong>
+    }
+    <div class="pill pill-name">{{ city?.name }}</div>
+  </div>
+  <div class="btns mr-4 flex" [ngClass]="{ 'btn-margin': isFirst }">
+    <button mat-raised-button class="icn-btn" (click)="deleteCity()">
+      <img src="assets/icons/delete-icon.svg" alt="" class="size-6" />
+    </button>
+    <button mat-raised-button class="icn-btn" (click)="openCityEditPopup()">
+      <img src="assets/icons/edit-icon.svg" alt="" class="size-6" />
+    </button>
+  </div>
+</div>

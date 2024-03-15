@@ -1,0 +1,22 @@
+@if(teams.length == 0){
+<div>
+  <p class="text-gray-400 text-center text-2xl mt-5 mb-5">
+    There aren't existing teams.
+  </p>
+</div>
+}@else {
+<div class="team-lst mt-12">
+  @for (singleTeam of teams; track singleTeam.id){
+
+  <app-team-item
+    [team]="singleTeam"
+    (refreshTeams)="refreshTeams()"
+    [stadiums]="stadiums"
+    [cities]="cities"
+    [divisions]="divisions"
+    [isFirst]="singleTeam === teams[0]"
+  ></app-team-item>
+
+  }
+</div>
+}

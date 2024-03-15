@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&display=swap");
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  font-family: "Quicksand", "Courier New", Courier, monospace;
+  height: 100%;
+}
+
+body {
+  background-image: linear-gradient(to right, #0b1416, #2a2c2e);
+  margin: 0;
+}

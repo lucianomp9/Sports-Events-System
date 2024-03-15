@@ -1,0 +1,63 @@
+<h1 class="text-center text-5xl font-semibold mb-24 mt-14 text-white">
+  ⚽ Sports Events APP
+</h1>
+
+<div class="add-btns mx-5">
+  <div class="primary-btn flex items-center justify-center mb-14">
+    <button mat-raised-button class="py-5 px-14" (click)="openEventPopup()">
+      New Event
+    </button>
+  </div>
+  <div class="second-btns flex items-center justify-around">
+    <button mat-raised-button (click)="openStadiumPopup()">New Stadium</button>
+    <button mat-raised-button (click)="openTeamPopup()">New Team</button>
+    <button mat-raised-button (click)="openCityPopup()">New City</button>
+    <button mat-raised-button (click)="openDivisionPopup()">
+      New Division
+    </button>
+  </div>
+</div>
+
+<div class="mx-48 mt-32 border-2 border-gray-500 text-white pb-2">
+  <div class="list-toggle text-center flex justify-around my-2">
+    <button id="eventsBtn"  (click)="onListToggleClick('Events')" [ngClass]="{'underlined': selectedListType === 'Events'}">Events</button>
+    <button id="teamsBtn" (click)="onListToggleClick('Teams')" [ngClass]="{'underlined': selectedListType === 'Teams'}">Teams</button>
+    <button id="citiesBtn" (click)="onListToggleClick('Cities')" [ngClass]="{'underlined': selectedListType === 'Cities'}">Cities</button>
+    <button id="stadiumsBtn" (click)="onListToggleClick('Stadiums')" [ngClass]="{'underlined': selectedListType === 'Stadiums'}">Stadiums</button>
+    <button id="divisionsBtn" (click)="onListToggleClick('Divisions')" [ngClass]="{'underlined': selectedListType === 'Divisions'}">Divisions</button>
+    
+  </div>
+  <hr />
+
+  <div class="item-lst mt-4 text-white">
+    <app-event-list
+      *ngIf="selectedListType === 'Events'"
+      (refreshHomeEvents)="refreshHomeEvents()"
+      [events]="events"
+    ></app-event-list>
+    <app-team-list
+      *ngIf="selectedListType === 'Teams'"
+      (refreshHomeTeams)="refreshHomeTeams()"
+      [teams]="teams"
+      [stadiums]="stadiums"
+      [cities]="cities"
+      [divisions]="divisions"
+    ></app-team-list>
+    <app-city-list
+    *ngIf="selectedListType === 'Cities'"
+    (refreshHomeCities)="refreshHomeCities()"
+    [cities]="cities"
+    ></app-city-list>
+    <app-stadium-list
+      *ngIf="selectedListType === 'Stadiums'"
+      (refreshHomeStadiums)="refreshHomeStadiums()"
+      [stadiums]="stadiums"
+    ></app-stadium-list>
+    <app-division-list
+      *ngIf="selectedListType === 'Divisions'"
+      (refreshHomeDivisions)="refreshHomeDivisions()"
+      [divisions]="divisions"
+      [teams]="teams"
+    ></app-division-list>
+  </div>
+</div>

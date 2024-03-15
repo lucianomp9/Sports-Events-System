@@ -1,0 +1,90 @@
+.team-info {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+strong {
+  font-size: 20px;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.info-row strong {
+  margin-right: 5px;
+}
+
+.info-row.column-layout{
+  flex-direction: column;
+}
+
+.info-row.column-layout strong{
+  margin-bottom: 20px;
+}
+
+
+
+.pill {
+  border: 2px solid #c5c5c5;
+  padding: 7px 9px;
+  border-radius: 50px;
+  margin: 5px 5px;
+  background-color: rgba(87, 87, 87, 0.205);
+  text-align: center;
+
+}
+
+.pill-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 210px;
+  max-width: 210px;
+  margin-right: 10px;
+
+}
+
+.pill-division {
+  min-width: 150px;
+  margin-right: 10px;
+  max-width: 150px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+.icn-btn {
+  background-color: rgba(128, 128, 128, 0);
+  border: 2px solid #c5c5c5;
+  border-radius: 10px;
+  margin-right: 4px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 6px;
+  height: 40px;
+  min-width: 0px;
+}
+
+button:hover {
+  background-color: #c5c5c521;
+}
+
+.action-buttons{
+    align-items: center;
+}
+
+.btns{
+  align-items: center;
+}
+
+.btns.btn-margin button{
+  margin-top: 50px;
+}

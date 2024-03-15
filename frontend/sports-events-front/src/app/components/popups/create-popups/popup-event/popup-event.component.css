@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&display=swap");
+html {
+  background-color: black;
+  font-family: "Quicksand", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+}
+
+.form-inputs{
+  display: grid;
+}

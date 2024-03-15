@@ -61,7 +61,7 @@ public class StadiumServiceImp implements IStadiumService {
         return stadiumMapper.stadiumToStadiumDTO(stadium);
     }
 
-    //POST
+    //PUT
     @Override
     public StadiumDTO updateStadiumById(Long id, StadiumDTO stadiumDTO) throws ApiException {
         Optional<Stadium> optionalStadium = stadiumRepository.findById(id);

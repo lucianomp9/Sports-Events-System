@@ -1,0 +1,71 @@
+<div class="mt-5 mb-2 flex justify-between">
+  <div class="event-info">
+    <div class="info-row" [ngClass]="{ 'column-layout': isFirst }">
+      @if(isFirst){
+      <strong>Date </strong>
+      }
+      <button class="pill pill-date">{{ event?.date }}</button>
+    </div>
+    <div class="info-row" [ngClass]="{ 'column-layout': isFirst }">
+      @if(isFirst){
+      <strong> Home Team </strong>
+      }
+      <div
+        class="pill pill-event"
+        [ngClass]="{
+          'bg-green-700': winner === 'homeTeam',
+          'bg-red-700': winner !== 'homeTeam'
+        }"
+      >
+        {{ event?.homeTeam?.name }}
+      </div>
+    </div>
+    <div class="info-row" [ngClass]="{ 'column-layout': isFirst }">
+      @if(isFirst){
+      <strong> Away Team </strong>
+      }
+      <div
+        class="pill pill-event"
+        [ngClass]="{
+          'bg-green-700': winner === 'awayTeam',
+          'bg-red-700': winner !== 'awayTeam'
+        }"
+      >
+        {{ event?.awayTeam?.name }}
+      </div>
+    </div>
+    <div class="info-row" [ngClass]="{ 'column-layout': isFirst }">
+      @if(isFirst){
+      <strong>Stadium </strong>
+      }
+      <div class="pill pill-stadium">{{ event?.stadium?.name }}</div>
+    </div>
+    <div class="info-row" [ngClass]="{ 'column-layout': isFirst }">
+      @if(isFirst){
+      <strong>Revenue </strong>
+      }
+      <div class="pill pill-date">${{ event?.revenue }}</div>
+    </div>
+  </div>
+
+  <div class="btn-container" [ngClass]="{ 'align-items-center': isFirst }">
+    <button
+      mat-raised-button
+      class="action-btns info-btn"
+      (click)="openDetailModal()"
+      [ngClass]="{ 'btn-info-size': isFirst }"
+    >
+      More Info
+    </button>
+    <button
+      mat-raised-button
+      class="action-btns icn-btn"
+      (click)="deleteEvent()"
+      [ngClass]="{ 'btn-icn-size': isFirst }"
+    >
+    <img src="assets/icons/delete-icon.svg" alt="" class="size-6" />
+
+    </button>
+  </div>
+</div>
+<br />

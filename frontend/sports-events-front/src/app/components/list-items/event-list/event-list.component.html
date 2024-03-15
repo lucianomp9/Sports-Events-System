@@ -1,0 +1,25 @@
+<!-- Conditional rendering -->
+@if(events.length == 0){
+<div>
+  <p class="text-gray-400 text-center text-2xl mt-5 mb-5">There aren't existing events.</p>
+</div>
+}@else {
+<!-- Order list by date -->
+<div class="orderByBtns text-center">
+  <button (click)="toggleOrderBy()">
+    Order by {{ orderByRecent ? "Newest" : "Oldest" }}
+  </button>
+</div>
+
+
+<div class="event-lst mt-12">
+  @for (singleEvent of events; track singleEvent.uuid) {
+  <app-event-item
+    [event]="singleEvent"
+    
+    (refreshEvents)="refreshEvents()"
+    [isFirst]="singleEvent === events[0]"
+  ></app-event-item>
+  }
+</div>
+}

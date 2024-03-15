@@ -1,0 +1,91 @@
+<form [formGroup]="myForm" (ngSubmit)="saveTeam()">
+  <h1 mat-dialog-title class="text-black text-center text-3xl mt-3">
+    Create new team!
+  </h1>
+
+  <!-- Create New Team Popup-->
+  <div mat-dialog-content class="form-inputs">
+    <mat-form-field hintLabel="Max 40 characters">
+      <mat-label>Name</mat-label>
+      <input
+        matInput
+        formControlName="name"
+        type="name"
+        #inputName
+        maxlength="40"
+        placeholder="Ex. Independiente"
+        required
+      />
+      <mat-hint align="end">{{ inputName.value.length }}/40</mat-hint>
+      @if(myForm.get('name')?.errors?.['required']){
+      <mat-error>Name is required</mat-error>
+      } @if(myForm.get('name')?.errors?.['maxlength']){
+      <mat-error>Maximum 40 characters allowed</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Select Stadium</mat-label>
+      <mat-select
+        [(value)]="selectedStadium"
+        formControlName="stadium"
+        matInput
+        required
+      >
+        <mat-option *ngFor="let stadium of stadiums" [value]="stadium">{{
+          stadium.name
+        }}</mat-option>
+      </mat-select>
+      @if(myForm.get('stadium')?.errors?.['required']){
+      <mat-error>Stadium is required</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Select City</mat-label>
+      <mat-select
+        [(value)]="selectedCity"
+        formControlName="city"
+        matInput
+        required
+      >
+        <mat-option *ngFor="let city of cities" [value]="city">{{
+          city.name
+        }}</mat-option>
+      </mat-select>
+      @if (myForm.get('city')?.errors?.['required']){
+
+      <mat-error>City is required</mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Select Division</mat-label>
+      <mat-select
+        [(value)]="selectedDivision"
+        formControlName="division"
+        matInput
+        required
+      >
+        <mat-option *ngFor="let division of divisions" [value]="division">{{
+          division.name
+        }}</mat-option>
+      </mat-select>
+      @if (myForm.get('division')?.errors?.['required']){
+
+      <mat-error>Division is required</mat-error>
+      }
+    </mat-form-field>
+  </div>
+
+  <div mat-dialog-actions>
+    <button
+      mat-raised-button
+      color="primary"
+      class="m-3"
+      [disabled]="myForm.invalid"
+    >
+      Save
+    </button>
+    <button mat-flat-button color="warn" [mat-dialog-close] class="m-3">
+      Close
+    </button>
+  </div>
+</form>

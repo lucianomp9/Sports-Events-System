@@ -1,0 +1,16 @@
+<div class="modal-content">
+  <h2>
+    {{ event.homeTeam.name }} ({{ event.homeGoals }}) vs
+    {{ event.awayTeam.name }} ({{ event.awayGoals }})
+  </h2>
+  <div class="modal-details">
+    <p><strong>Date:</strong> {{ event.date }}</p>
+    <p><strong>Time:</strong> {{ event.time }}</p>
+    <p><strong>Stadium:</strong> {{ event.stadium?.name }} ({{event.homeTeam.city.name}}) </p>
+    <p><strong>Home Goals:</strong> {{ event.homeGoals }}</p>
+    <p><strong>Away Goals:</strong> {{ event.awayGoals }}</p>
+    <p><strong>Spectators:</strong> {{ event.spectators }}</p>
+    <p><strong>Revenue:</strong> {{ event.revenue }}</p>
+  </div>
+  <button mat-raised-button (click)="closeModal()" color="warn">Close</button>
+</div>

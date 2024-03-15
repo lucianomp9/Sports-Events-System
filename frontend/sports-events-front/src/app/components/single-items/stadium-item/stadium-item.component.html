@@ -1,0 +1,25 @@
+<div class="mt-5 mb-2 flex justify-between">
+  <div class="stadium-info">
+    <div class="info-row" [ngClass]="{ 'column-layout': isFirst }">
+      @if(isFirst){
+      <strong>Name</strong>
+      }
+      <div class="pill name">{{ stadium?.name }}</div>
+    </div>
+    <div class="info-row" [ngClass]="{ 'column-layout': isFirst }">
+      @if(isFirst){
+      <strong>Capacity</strong>
+      }
+      <div class="pill capacity">{{ stadium?.capacity }}</div>
+    </div>
+  </div>
+
+  <div class="btns mr-4 flex" [ngClass]="{ 'btn-margin': isFirst }">
+    <button mat-raised-button class="icn-btn" (click)="deleteStadium()">
+      <img src="assets/icons/delete-icon.svg" alt="" class="size-6" />
+    </button>
+    <button mat-raised-button class="icn-btn" (click)="openStadiumEditPopup()">
+      <img src="assets/icons/edit-icon.svg" alt="" class="size-6" />
+    </button>
+  </div>
+</div>

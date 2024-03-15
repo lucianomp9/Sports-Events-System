@@ -1,0 +1,30 @@
+<div class="mt-5 mb-2 flex justify-between">
+  <div class="team-info">
+    <div class="info-row" [ngClass]="{ 'column-layout': isFirst }">
+      @if (isFirst) {
+      <strong>Name</strong>
+      }
+      <div class="pill pill-name">{{ team?.name }}</div>
+    </div>
+    <div class="info-row" [ngClass]="{ 'column-layout': isFirst }">
+      @if (isFirst) {
+      <strong>Division</strong>
+      }
+      <div class="pill pill-division">{{ team?.division?.name }}</div>
+    </div>
+    <div class="info-row" [ngClass]="{ 'column-layout': isFirst }">
+      @if (isFirst) {
+      <strong>Stadium</strong>
+      }
+      <div class="pill pill-name">{{ team?.stadium?.name }}</div>
+    </div>
+  </div>
+  <div class="btns mr-4 flex" [ngClass]="{ 'btn-margin': isFirst }">
+    <button mat-raised-button class="icn-btn"  (click)="deleteTeam()">
+      <img src="assets/icons/delete-icon.svg" alt="" class="size-6" />
+    </button>
+    <button mat-raised-button class="icn-btn" (click)="openTeamEditPopup()">
+      <img src="assets/icons/edit-icon.svg" alt="" class="size-6" />
+    </button>
+  </div>
+</div>

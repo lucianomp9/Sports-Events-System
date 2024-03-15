@@ -1,0 +1,17 @@
+@if(cities.length == 0){
+<div>
+  <p class="text-gray-400 text-center text-2xl mt-5 mb-5">
+    There aren't existing cities.
+  </p>
+</div>
+}@else {
+<div class="city-lst mt-12">
+  @for (singleCity of cities; track singleCity.id) {
+  <app-city-item
+    [city]="singleCity"
+    (refreshCities)="refreshCities()"
+    [isFirst]="singleCity === cities[0]"
+  ></app-city-item>
+  }
+</div>
+}

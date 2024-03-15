@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&display=swap");
+
+
+
+button {
+  font-family: "Quicksand", Arial, Helvetica, sans-serif;
+}
+
+button:hover{
+    background-color: rgba(168, 168, 168, 0.226);
+}
+
+.primary-btn button {
+  background-color: rgba(128, 128, 128, 0);
+  border: 2px solid #a19fa1;
+  border-radius: 15px;
+  color: white;
+  font-size: 30px;
+  padding: 35px;
+}
+
+.primary-btn button:hover {
+    background-color: rgba(168, 168, 168, 0.226);
+}
+.second-btns button {
+  background-color: rgba(128, 128, 128, 0);
+  border: 2px solid #a19fa1;
+  border-radius: 10px;
+  color: white;
+}
+
+.second-btns button:hover {
+  background-color: rgba(168, 168, 168, 0.226);
+}
+
+
+.list-toggle button {
+  border: none; /* Remove default button border */
+  background-color: transparent; /* Make button transparent */
+  color: #fff; /* Text color for buttons */
+  padding: 0px 5px; /* Adjust padding as needed */
+  cursor: pointer; /* Indicate clickable element */
+}
+
+.list-toggle button.underlined {
+  border: 2px solid rgb(117, 117, 117);
+  background-color: rgba(161, 159, 161, 0.199);
+  border-radius: 6px;
+}
+

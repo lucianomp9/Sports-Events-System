@@ -1,0 +1,18 @@
+@if(divisions.length == 0){
+<div>
+  <p class="text-gray-400 text-center text-2xl mt-5 mb-5">
+    There aren't existing divisions.
+  </p>
+</div>
+}@else {
+<div class="division-lst mt-12">
+  @for (singleDivision of divisions; track singleDivision.id) {
+  <app-division-item
+  [division]="singleDivision"
+  [teams]="teams"
+  [isFirst]="singleDivision === divisions[0]"
+  (refreshDivisions)="refreshDivisions()"
+  ></app-division-item>
+  }
+</div>
+}

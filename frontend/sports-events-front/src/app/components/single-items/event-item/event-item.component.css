@@ -1,0 +1,105 @@
+.event-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+strong {
+  font-size: 20px;
+}
+
+.action-btns {
+  background-color: rgba(128, 128, 128, 0);
+  border: 2px solid #c5c5c5;
+  border-radius: 10px;
+  margin-right: 4px;
+}
+
+.icn-btn {
+  padding: 6px;
+}
+
+.info-btn {
+  color: white;
+  width: 8.5em;
+  height: auto;
+  padding: 6px;
+}
+
+button:hover {
+  background-color: #c5c5c521;
+}
+
+.pill {
+  border: 2px solid #c5c5c5;
+  pointer-events: none;
+  padding: 7px 9px;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 5px;
+  margin-left: 5px;
+  border-radius: 50px;
+  place-content: center;
+}
+
+.pill-event {
+  margin-left: 10px;
+  display: flex; /* Enable flexbox for text wrapping */
+  align-items: center; /* Vertically center text within the pill */
+  white-space: nowrap; /* Prevent text wrapping by default */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Add ellipsis (...) for long text */
+  min-width: 190px; /* Set minimum width */
+  max-width: 190px; /* Set maximum width */
+}
+
+.pill-stadium{
+  margin-left: 10px;
+  display: flex; /* Enable flexbox for text wrapping */
+  align-items: center; /* Vertically center text within the pill */
+  white-space: nowrap; /* Prevent text wrapping by default */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Add ellipsis (...) for long text */
+  min-width: 190px; /* Set minimum width */
+  max-width: 190px; /* Set maximum width */
+  background-color: rgba(87, 87, 87, 0.205);
+}
+.pill-date {
+  background-color: rgba(87, 87, 87, 0.205);
+  min-width: 120px;
+  max-width: 120px;
+}
+
+.info-row.column-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-row.column-layout strong{
+  margin-bottom: 30px;
+}
+
+.action-btns.btn-icn-size {
+  height: 43px;
+  margin-top: 55px;
+}
+
+.action-btns.btn-info-size {
+  height: 43px;
+  margin-top: 55px;
+}
+
+.btn-container {
+  margin-right: 13px;
+  display: flex;
+}
+
+.btn-container.align-items-center {
+  align-items: center;
+}

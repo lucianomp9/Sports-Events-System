@@ -15,6 +15,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/v1")
+@CrossOrigin("http://localhost:4200")
 public class MatchController {
 
     //Dependency injection

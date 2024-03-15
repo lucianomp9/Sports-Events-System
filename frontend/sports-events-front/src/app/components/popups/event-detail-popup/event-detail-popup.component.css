@@ -1,0 +1,37 @@
+.modal-content {
+    background-color: #383737;
+    padding: 10%;
+    color: white;
+  }
+  
+  .modal-content h2 {
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+  
+  .modal-details {
+    margin-bottom: 15px;
+  }
+  
+  .modal-details p {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+  }
+  
+  .modal-details p strong {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  button[mat-button] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  

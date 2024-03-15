@@ -1,0 +1,17 @@
+@if(stadiums.length == 0){
+<div>
+  <p class="text-gray-400 text-center text-2xl mt-5 mb-5">
+    There aren't existing stadiums.
+  </p>
+</div>
+}@else {
+<div class="stadium-lst mt-12">
+  @for (singleStadium of stadiums; track singleStadium.id) {
+  <app-stadium-item
+    [stadium]="singleStadium"
+    [isFirst]="singleStadium === stadiums[0]"
+    (refreshStadiums)="refreshStadiums()"
+  ></app-stadium-item>
+  }
+</div>
+}
