@@ -1,6 +1,8 @@
-# Sports Events Api Rest CRUD
+# Sports Events CRUD System
 
-REST API for the creation of sports events, using CRUD operations on matches, teams, stadiums, divisions, and cities. This API was programmed using Java and Spring Boot. Hibernate was used for object-relational mapping, and the database used was MySQL. Design patterns such as MVC, DTO, Repositories, Dependency Injection were used. Exception handling was also implemented.
+A CRUD system for managing sports events, implementing operations on matches, teams, stadiums, divisions, and cities. This system includes both backend REST API and a frontend application built with **Angular**.  
+The backend API is developed using **Java** and **Spring Boot**, with Hibernate for object-relational mapping. MySQL is used as the database. Design patterns such as MVC, DTO, Repositories, and Dependency Injection are implemented, along with exception handling.
+
 
 ---
 ## Index
@@ -37,9 +39,14 @@ REST API for the creation of sports events, using CRUD operations on matches, te
 		- [Get Match](#get-match)
 		- [Get All Matches](#get-all-matches)
 		- [Delete Match](#delete-match)
- 
+  	- [Frontend](#Frontend)
+		- [Installation](#frontend-installation)
+		- [Usage](#frontend-usage)
+		- [Features Display](#features-display)
 
-## Installation
+
+
+# Installation
 ### Configuration and Application Execution
 Follow these steps to configure, install, and run the application. You must have Java 17 and MySQL installed.
 
@@ -69,7 +76,7 @@ src/main/resources/scripts/bd_script.sql
 ### Run the Application
 Once you have configured the database and saved the changes in application.properties, you can run the application. Find the main class "MatchescrudApplication" (annotated with @SpringBootApplication) and click the run button in your development environment.
 
-## ER Model
+# ER Model
 The Entity-Relationship model corresponding to the database.
 
 ![ER Model](https://github.com/lucianomp9/Sports-Events-CRUD/assets/86586819/8409d484-4e3a-4c96-b276-697551988f5a)
@@ -654,5 +661,20 @@ The Entity-Relationship model corresponding to the database.
 ![image](https://github.com/lucianomp9/random/assets/86586819/2558d0ba-466f-48fb-a321-1f716baf1fd4)
 
 
----
-*(Front-end connection is currently in progress)* 
+## Frontend
+
+### Frontend Installation
+To install and run the frontend application, follow these steps:
+
+1. Navigate to the frontend directory within the project.
+2. Install dependencies using npm or yarn.
+3. Run the development server.
+
+### Frontend Usage
+Once the frontend application is running, you can access it through a web browser. The application provides a user-friendly interface for interacting with the sports events CRUD system.
+
+### Features Display
+
+##### Home Page
+![image](https://github.com/lucianomp9/Sports-Events-CRUD/assets/86586819/d586df09-8592-4c97-a3f4-ec985c509de3)
+
