@@ -39,10 +39,10 @@ The backend API is developed using **Java** and **Spring Boot**, with Hibernate 
 		- [Get Match](#get-match)
 		- [Get All Matches](#get-all-matches)
 		- [Delete Match](#delete-match)
-  	- [Frontend](#Frontend)
-		- [Installation](#frontend-installation)
-		- [Usage](#frontend-usage)
-		- [Features Display](#features-display)
+  - [Frontend](#Frontend)
+	- [Installation](#frontend-installation)
+	- [Usage](#frontend-usage)
+	- [Features Display](#features-display)
 
 
 
