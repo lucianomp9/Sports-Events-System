@@ -120,27 +120,30 @@ export class HomeComponent implements OnInit {
   refreshHomeTeams() {
     this.apiService.refreshTeams$.next();
 
-    //To spread changes to other components after updation
+    //To spread and see changes in other components after updation
     this.refreshHomeEvents();
   }
   refreshHomeStadiums() {
     this.apiService.refreshStadiums$.next();
 
-    //To spread changes to other components after updation
+    //To spread and see changes in other components after updation
     this.refreshHomeEvents();
+    this.refreshHomeTeams();
   }
   refreshHomeCities() {
     this.apiService.refreshCities$.next();
 
-    //To spread changes to other components after updation
+    //To spread and see changes in other components after updation
     this.refreshHomeEvents();
+    this.refreshHomeTeams();
   }
 
   refreshHomeDivisions() {
     this.apiService.refreshDivisions$.next();
 
-    //To spread changes to other components after updation
-    this.refreshHomeTeams;
+    //To spread and see changes in other components after updation
+    this.refreshHomeEvents();
+    this.refreshHomeTeams();
   }
   //List entity selector
   onListToggleClick(listType: string) {
@@ -170,7 +173,7 @@ export class HomeComponent implements OnInit {
   // CREATE TEAM POPUP
   openTeamPopup() {
     const dialogRef = this.dialog.open(PopupTeamComponent, {
-      width: '40%',
+      width: '30%',
       height: 'auto',
       enterAnimationDuration: 200,
       exitAnimationDuration: 200,
@@ -190,7 +193,7 @@ export class HomeComponent implements OnInit {
   // CREATE STADIUM POPUP
   openStadiumPopup() {
     const dialogRef = this.dialog.open(PopupStadiumComponent, {
-      width: '40%',
+      width: '20%',
       height: 'auto',
       enterAnimationDuration: 200,
       exitAnimationDuration: 200,
@@ -208,7 +211,7 @@ export class HomeComponent implements OnInit {
   // CREATE CITY POPUP
   openCityPopup() {
     const dialogRef = this.dialog.open(PopupCityComponent, {
-      width: '40%',
+      width: '20%',
       height: 'auto',
       enterAnimationDuration: 200,
       exitAnimationDuration: 200,
@@ -226,7 +229,7 @@ export class HomeComponent implements OnInit {
   // CREATE DIVISION POPUP
   openDivisionPopup() {
     const dialogRef = this.dialog.open(PopupDivisionComponent, {
-      width: '40%',
+      width: '20%',
       height: 'auto',
       enterAnimationDuration: 200,
       exitAnimationDuration: 200,

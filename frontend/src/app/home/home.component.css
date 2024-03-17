@@ -11,8 +11,9 @@ button:hover{
 }
 
 .primary-btn button {
+  background-image: linear-gradient(90deg, rgb(98, 0, 117), rgba(179, 0, 202, 0.938));
   background-color: rgba(128, 128, 128, 0);
-  border: 2px solid #a19fa1;
+  border: 2px solid #ffffff;
   border-radius: 15px;
   color: white;
   font-size: 30px;
@@ -20,17 +21,17 @@ button:hover{
 }
 
 .primary-btn button:hover {
-    background-color: rgba(168, 168, 168, 0.226);
+    background-color: rgb(0, 0, 0);
 }
 .second-btns button {
-  background-color: rgba(128, 128, 128, 0);
-  border: 2px solid #a19fa1;
+  background-color: rgba(88, 88, 88, 0);
+  border: 2px solid #b4b4b4;
   border-radius: 10px;
   color: white;
 }
 
 .second-btns button:hover {
-  background-color: rgba(168, 168, 168, 0.226);
+  background-color: rgba(148, 148, 148, 0.226);
 }
 
 

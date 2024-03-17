@@ -4,56 +4,60 @@
   </h1>
 
   <!-- Create New Event Popup-->
-  <div mat-dialog-content class="form-inputs">
-    <mat-form-field>
-      <mat-label>Date</mat-label>
-      <input matInput formControlName="date" type="date" />
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Time</mat-label>
-      <input matInput formControlName="time" type="time" />
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Select Home Team</mat-label>
-      <mat-select
-        [(value)]="selectedHomeTeam"
-        formControlName="homeTeam"
-        matInput
-      >
-        <mat-option *ngFor="let team of teams" [value]="team">{{
-          team.name
-        }}</mat-option>
-      </mat-select>
-    </mat-form-field>
+  <div class="form-input-container">
+    <div mat-dialog-content class="form-datetime-inputs">
+      <mat-form-field>
+        <mat-label>Date</mat-label>
+        <input matInput formControlName="date" type="date" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Time</mat-label>
+        <input matInput formControlName="time" type="time" />
+      </mat-form-field>
+    </div>
+    <div class="form-inputs">
+      <mat-form-field>
+        <mat-label>Select Home Team</mat-label>
+        <mat-select
+          [(value)]="selectedHomeTeam"
+          formControlName="homeTeam"
+          matInput
+        >
+          <mat-option *ngFor="let team of teams" [value]="team">{{
+            team.name
+          }}</mat-option>
+        </mat-select>
+      </mat-form-field>
 
-    <mat-form-field>
-      <mat-label>Goals</mat-label>
-      <input matInput formControlName="homeGoals" type="number" />
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Select Away Team</mat-label>
-      <mat-select
-        [(value)]="selectedAwayTeam"
-        formControlName="awayTeam"
-        matInput
-      >
-        <mat-option *ngFor="let team of teams" [value]="team">{{
-          team.name
-        }}</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Goals</mat-label>
-      <input matInput formControlName="awayGoals" type="number" />
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Ticket Price</mat-label>
-      <input matInput formControlName="ticketPrice" type="number" />
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Spectators</mat-label>
-      <input matInput formControlName="spectators" type="number" />
-    </mat-form-field>
+      <mat-form-field>
+        <mat-label>Goals</mat-label>
+        <input matInput formControlName="homeGoals" type="number" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Select Away Team</mat-label>
+        <mat-select
+          [(value)]="selectedAwayTeam"
+          formControlName="awayTeam"
+          matInput
+        >
+          <mat-option *ngFor="let team of teams" [value]="team">{{
+            team.name
+          }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Goals</mat-label>
+        <input matInput formControlName="awayGoals" type="number" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Ticket Price</mat-label>
+        <input matInput formControlName="ticketPrice" type="number" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Spectators</mat-label>
+        <input matInput formControlName="spectators" type="number" />
+      </mat-form-field>
+    </div>
   </div>
 
   <div mat-dialog-actions>
@@ -63,6 +67,7 @@
       color="warn"
       (click)="closePopup(false)"
       class="m-3"
+      [mat-dialog-close]
     >
       Close
     </button>

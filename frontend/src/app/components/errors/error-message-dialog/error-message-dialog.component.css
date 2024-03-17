@@ -1,0 +1,22 @@
+.error-popup {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  background-color: rgb(206, 0, 0);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  animation: slideOut 4s ease-in-out;
+  -webkit-animation: slideOut 4s ease-in-out;
+}
+
+@keyframes slideOut {
+  80% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}

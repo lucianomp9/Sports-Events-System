@@ -1,5 +1,9 @@
 import { Component, Inject, OnInit, Input } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import {
+  MAT_DIALOG_DATA,
+  MatDialog,
+  MatDialogRef,
+} from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
@@ -10,6 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatSelectModule } from '@angular/material/select';
 import { Team } from '../../../../models/team';
 import { CommonModule } from '@angular/common';
+import { throwError } from 'rxjs';
+import { ErrorMessageDialogComponent } from '../../../errors/error-message-dialog/error-message-dialog.component';
 
 @Component({
   selector: 'app-popup',
@@ -36,11 +42,14 @@ export class PopupEventComponent implements OnInit {
 
   actualDate: string = new Date().toISOString().slice(0, 10);
 
+  errorMessage: string | undefined;
+
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,
     private ref: MatDialogRef<PopupEventComponent>,
     private builder: FormBuilder,
-    private apiService: ApiService
+    private apiService: ApiService,
+    private dialog: MatDialog
   ) {}
 
   ngOnInit(): void {
@@ -66,8 +75,24 @@ export class PopupEventComponent implements OnInit {
   });
 
   saveEvent() {
-    this.apiService.saveEvent(this.myForm.value).subscribe((res) => {
-      this.closePopup(true);
+    this.apiService.saveEvent(this.myForm.value).subscribe({
+      next: (res) => {
+        this.closePopup(true);
+      },
+      error: (err) => {
+        // If error is handled in API, sent personalized message.
+        if (typeof err.error === 'string') {
+          this.errorMessage = err.error;
+        } else {
+          // Sent default error message + details
+          this.errorMessage = 'An error ocurred: ' + err.error.detail;
+        }
+        this.dialog.open(ErrorMessageDialogComponent, {
+          data: {
+            message: this.errorMessage,
+          },
+        });
+      },
     });
   }
 }

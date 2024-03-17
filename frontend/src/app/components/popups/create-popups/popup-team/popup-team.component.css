@@ -7,3 +7,14 @@ html {
 .form-inputs{
   display: grid;
 }
+
+form {
+  background-color: #383737;
+}
+
+
+mat-hint,
+mat-form-field,
+form h1{
+  color: white;
+}

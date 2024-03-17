@@ -26,7 +26,6 @@ export class EventItemComponent implements OnInit {
   constructor(private apiService: ApiService, private dialog: MatDialog) {}
 
   ngOnInit(): void {
-    // Asigna el valor de homeGoals aquí después de que event haya sido inicializado
     this.homeGoals = this.event?.homeGoals;
     this.awayGoals = this.event?.awayGoals;
 
@@ -37,7 +36,7 @@ export class EventItemComponent implements OnInit {
     if (this.event?.uuid) {
       this.apiService.deleteEvent(this.event?.uuid).subscribe((result) => {
         if (result) {
-          this.refreshEvents.emit();
+          this.refreshEvents.emit(); //Emit void event to list for refreshing events.
         }
       });
     }
@@ -45,8 +44,8 @@ export class EventItemComponent implements OnInit {
 
   getWinner(): void {
     if (this.homeGoals && this.awayGoals)
-      if (this.homeGoals > this.awayGoals) {
-        this.winner = 'homeTeam'; // No hay suficientes datos para determinar el ganador
+      if (this.homeGoals > this.awayGoals) { //If home team scored more goals than away team, it's the winner.
+        this.winner = 'homeTeam'; 
       } else {
         this.winner = 'awayTeam';
       }
@@ -54,12 +53,11 @@ export class EventItemComponent implements OnInit {
 
   openDetailModal(): void {
     const dialogRef = this.dialog.open(EventDetailPopupComponent, {
-      width: '500px', // Ancho del modal
-      data: this.event, // Pasa el evento al modal
+      width: '500px',
+      data: this.event, // Pass event to modal
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      // Maneja el resultado del modal si es necesario
     });
   }
 }

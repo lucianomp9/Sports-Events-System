@@ -4,6 +4,17 @@ html {
     sans-serif;
 }
 
-.form-inputs{
+form {
+  background-color: #383737;
+}
+
+.form-inputs {
+  margin-top: 10px;
   display: grid;
+}
+
+mat-hint,
+mat-form-field,
+form h1 {
+  color: white;
 }

@@ -8,6 +8,7 @@ import { Stadium } from '../../../models/stadium';
 import { MatDialog } from '@angular/material/dialog';
 import { Division } from '../../../models/division';
 import { CommonModule } from '@angular/common';
+import { ErrorMessageDialogComponent } from '../../errors/error-message-dialog/error-message-dialog.component';
 
 @Component({
   selector: 'app-team-item',
@@ -30,10 +31,20 @@ export class TeamItemComponent implements OnInit {
 
   deleteTeam() {
     if (this.team?.id) {
-      this.apiService.deleteTeam(this.team.id).subscribe((result) => {
-        if (result) {
-          this.refreshListTeams(); // Trigger refresh event
-        }
+      this.apiService.deleteTeam(this.team.id).subscribe({
+        next: (res) => {
+          if (res) {
+            this.refreshListTeams(); // Trigger refresh event
+          }
+        },
+        error: () => {
+          this.dialog.open(ErrorMessageDialogComponent, {
+            data: {
+              message:
+                'Unable to delete team. Please delete all events associated with this team first.',
+            },
+          });
+        },
       });
     }
   }
@@ -53,6 +64,7 @@ export class TeamItemComponent implements OnInit {
         stadiums: this.stadiums,
         cities: this.cities,
         divisions: this.divisions,
+        title: 'Update Team',
       },
     });
     dialogRef.afterClosed().subscribe((result) => {

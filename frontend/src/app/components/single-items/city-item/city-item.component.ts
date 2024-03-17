@@ -4,6 +4,7 @@ import { ApiService } from '../../../service/api.service';
 import { EditCityComponent } from '../../popups/edit-popups/edit-city/edit-city.component';
 import { MatDialog } from '@angular/material/dialog';
 import { CommonModule } from '@angular/common';
+import { ErrorMessageDialogComponent } from '../../errors/error-message-dialog/error-message-dialog.component';
 
 @Component({
   selector: 'app-city-item',
@@ -24,10 +25,20 @@ export class CityItemComponent implements OnInit {
 
   deleteCity() {
     if (this.city?.id) {
-      this.apiService.deleteCity(this.city.id).subscribe((result) => {
-        if (result) {
-          this.refreshCities.emit(); // Trigger refresh cities
-        }
+      this.apiService.deleteCity(this.city.id).subscribe({
+        next: (res) => {
+          if (res) {
+            this.refreshCities.emit();
+          }
+        },
+        error: () => {
+          this.dialog.open(ErrorMessageDialogComponent, {
+            data: {
+              message:
+                'Unable to delete city. Please delete all teams associated with this city first.',
+            },
+          });
+        },
       });
     }
   }
@@ -40,10 +51,12 @@ export class CityItemComponent implements OnInit {
       exitAnimationDuration: 200,
       data: {
         city: this.city,
+        title: 'Update City',
       },
     });
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
+        console.log('entre');
         this.refreshCities.emit();
       }
     });
