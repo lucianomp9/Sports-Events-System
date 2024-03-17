@@ -6,11 +6,11 @@ The backend API is developed using **Java** and **Spring Boot**, with Hibernate 
 
 ---
 ## Index
-- [**🌐 Frontend**](#🌐-Frontend)
+- [**🌐 Frontend**](#-Frontend)
 	- [Installation](#frontend-installation)
 	- [Usage](#frontend-usage)
 	- [Features Display](#features-display)
-- [**⚙ Backend**](#⚙-Backend)
+- [**⚙ Backend**](#-Backend)
 	- [Installation](#Installation)
 	- [ER Model](#ER-model)
 	- [API Endpoints](#api-endpoints)
@@ -58,7 +58,35 @@ To install and run the frontend application, follow these steps:
 ## Frontend Usage
 Once the frontend application and the backend API is running, you can access it through a web browser. The application provides a user-friendly interface for interacting with the Sports Events system.
 
-## Features Display
+# Features Display
+
+## 🎟 Create Event
+![create-event](https://github.com/lucianomp9/Sports-Events-CRUD/assets/86586819/6976aebd-de63-4528-bd65-fa33b9fac72a)
+
+### 👥 Create Team
+![create-team](https://github.com/lucianomp9/Sports-Events-CRUD/assets/86586819/ab842581-67ca-429d-943e-3f235291fc93)
+
+### 🏙 Create City
+![create-city](https://github.com/lucianomp9/Sports-Events-CRUD/assets/86586819/a074b796-2cfa-4491-9242-649dde45ce95)
+
+### 🏟 Create Stadium
+![create-stadium](https://github.com/lucianomp9/Sports-Events-CRUD/assets/86586819/74b7818a-d3fc-451a-a110-772ce9765af6)
+
+### 🏆 Create Division
+![create-division](https://github.com/lucianomp9/Sports-Events-CRUD/assets/86586819/c80d3e9f-d786-4c7d-a258-4986f31d9610)
+
+### 🔄 Reactive Rendering
+![reactive-rendering](https://github.com/lucianomp9/Sports-Events-CRUD/assets/86586819/7bd1108b-a872-4e3d-9edf-49e6e36b21df)
+
+### ⚠️ Error Popups
+![error-handling](https://github.com/lucianomp9/Sports-Events-CRUD/assets/86586819/64111775-fa5f-47dd-add9-562bfa9d37c2)
+
+### ✅ Input Validation
+![validation](https://github.com/lucianomp9/Sports-Events-CRUD/assets/86586819/1f032a42-424a-4576-beb6-10e609e752d5)        
+ㅤ
+ㅤ
+ㅤ
+ㅤ
 
 
 
