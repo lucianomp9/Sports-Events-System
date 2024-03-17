@@ -6,47 +6,66 @@ The backend API is developed using **Java** and **Spring Boot**, with Hibernate 
 
 ---
 ## Index
-- [Installation](#Installation)
-- [ER Model](#ER-model)
-- [API Endpoints](#api-endpoints)
-	- [Team](#team)
-		- [Create Team](#create-team)
-		- [Get Team](#get-team)
-  		- [Get All Teams](#get-all-teams)
-		- [Get Teams by City](#get-teams-by-city)
-		- [Update Team](#update-team)
-   		- [Delete Team](#delete-team)
-	- [Stadium](#stadium)
-   		- [Create Stadium](#create-stadium)
-		- [Get Stadium](#get-stadium)
-		- [Get All Stadiums](#get-all-stadiums)
-		- [Update Stadium](#update-stadium)
-   		- [Delete Stadium](#delete-stadium)
-	- [Division](#division)
-		- [Create Division](#create-division)
-		- [Get Division](#get-division)
-		- [Get All Divisions](#get-all-divisions)
-		- [Update Division](#update-division)
-		- [Delete Division](#delete-division)
-  	- [City](#city)
-		- [Create City](#create-city)
-		- [Get City](#get-city)
-		- [Get All Cities](#get-all-cities)
-		- [Update City](#update-city)
-		- [Delete City](#delete-city)
-  	- [Match](#match)
-		- [Create Match](#create-match)
-		- [Get Match](#get-match)
-		- [Get All Matches](#get-all-matches)
-		- [Delete Match](#delete-match)
-- [Frontend](#Frontend)
+- [**🌐 Frontend**](#Frontend)
 	- [Installation](#frontend-installation)
 	- [Usage](#frontend-usage)
 	- [Features Display](#features-display)
+- [**⚙ Backend**](#Backend)
+	- [Installation](#Installation)
+	- [ER Model](#ER-model)
+	- [API Endpoints](#api-endpoints)
+		- [Team](#team)
+			- [Create Team](#create-team)
+			- [Get Team](#get-team)
+	  		- [Get All Teams](#get-all-teams)
+			- [Get Teams by City](#get-teams-by-city)
+			- [Update Team](#update-team)
+	   		- [Delete Team](#delete-team)
+		- [Stadium](#stadium)
+	   		- [Create Stadium](#create-stadium)
+			- [Get Stadium](#get-stadium)
+			- [Get All Stadiums](#get-all-stadiums)
+			- [Update Stadium](#update-stadium)
+	   		- [Delete Stadium](#delete-stadium)
+		- [Division](#division)
+			- [Create Division](#create-division)
+			- [Get Division](#get-division)
+			- [Get All Divisions](#get-all-divisions)
+			- [Update Division](#update-division)
+			- [Delete Division](#delete-division)
+	  	- [City](#city)
+			- [Create City](#create-city)
+			- [Get City](#get-city)
+			- [Get All Cities](#get-all-cities)
+			- [Update City](#update-city)
+			- [Delete City](#delete-city)
+	  	- [Match](#match)
+			- [Create Match](#create-match)
+			- [Get Match](#get-match)
+			- [Get All Matches](#get-all-matches)
+			- [Delete Match](#delete-match)
+
+
+# 🌐 Frontend
+
+## Frontend Installation
+To install and run the frontend application, follow these steps:
+
+1. Navigate to the frontend directory within the project.
+2. Install dependencies using npm or yarn.
+3. Run the development server.
+
+## Frontend Usage
+Once the frontend application and the backend API is running, you can access it through a web browser. The application provides a user-friendly interface for interacting with the Sports Events system.
+
+## Features Display
 
 
 
-# Installation
+
+# ⚙ Backend
+
+## Installation
 ### Configuration and Application Execution
 Follow these steps to configure, install, and run the application. You must have Java 17 and MySQL installed.
 
@@ -659,23 +678,3 @@ The Entity-Relationship model corresponding to the database.
 **Postman Example**
 
 ![image](https://github.com/lucianomp9/random/assets/86586819/2558d0ba-466f-48fb-a321-1f716baf1fd4)
-
-
-## Frontend
-
-### Frontend Installation
-To install and run the frontend application, follow these steps:
-
-1. Navigate to the frontend directory within the project.
-2. Install dependencies using npm or yarn.
-3. Run the development server.
-
-### Frontend Usage
-Once the frontend application is running, you can access it through a web browser. The application provides a user-friendly interface for interacting with the sports events CRUD system.
-
-### Features Display
-
-##### Home Page
-![image](https://github.com/lucianomp9/Sports-Events-CRUD/assets/86586819/1cc89b68-fa8e-456f-8596-0b84b1e6abc4)
-
-
