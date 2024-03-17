@@ -7,7 +7,7 @@ The backend API is developed using **Java** and **Spring Boot**, with Hibernate 
 ---
 ## Index
 - [**🌐 Frontend**](#-Frontend)
-	- [Installation](#-installation)
+	- [Installation](#frontend-installation)
 	- [Usage](#frontend-usage)
 	- [Features Display](#features-display)
 - [**⚙ Backend**](#-Backend)
