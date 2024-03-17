@@ -63,7 +63,7 @@ public class TeamServiceImp implements ITeamService {
         Optional<Team> optionalTeam = teamRepository.findByName(teamDTO.getName());
 
         if(optionalTeam.isPresent()){
-            throw new TeamAlreadyExist(team.getName());
+            throw new TeamAlreadyExist(optionalTeam.get().getName());
         }
 
         //Set attributes via object ID or creates a new one

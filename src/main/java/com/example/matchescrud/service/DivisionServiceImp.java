@@ -65,7 +65,7 @@ public class DivisionServiceImp implements IDivisionService {
         Optional<Division> optionalDivision = divisionRepository.findByName(division.getName());
 
         if(optionalDivision.isPresent()){
-            throw new DivisionAlreadyExist(division.getName());
+            throw new DivisionAlreadyExist(optionalDivision.get().getName());
         }
         divisionRepository.save(division);
         return divisionMapper.divisionToDivisionDTO(division);

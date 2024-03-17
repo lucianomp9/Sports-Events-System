@@ -65,7 +65,7 @@ public class CityServiceImp implements ICityService {
         Optional<City> optionalCity = cityRepository.findByName(city.getName());
 
         if(optionalCity.isPresent()){
-            throw new CityAlreadyExist(city.getName());
+            throw new CityAlreadyExist(optionalCity.get().getName());
         }
         cityRepository.save(city);
         return cityMapper.cityToCityDTO(city);

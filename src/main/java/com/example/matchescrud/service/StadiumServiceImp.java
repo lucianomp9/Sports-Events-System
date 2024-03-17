@@ -48,7 +48,7 @@ public class StadiumServiceImp implements IStadiumService {
         Optional<Stadium> optionalStadium = stadiumRepository.findByName(stadium.getName());
 
         if(optionalStadium.isPresent()){
-            throw new StadiumAlreadyExist(stadium.getName());
+            throw new StadiumAlreadyExist(optionalStadium.get().getName());
         }
 
         // Asign stadiumDTO parameters
