@@ -7,7 +7,7 @@ The backend API is developed using **Java** and **Spring Boot**, with Hibernate 
 ---
 ## Index
 - [**🌐 Frontend**](#-Frontend)
-	- [Installation](#frontend-installation)
+	- [Installation](#-installation)
 	- [Usage](#frontend-usage)
 	- [Features Display](#features-display)
 - [**⚙ Backend**](#-Backend)
@@ -48,7 +48,7 @@ The backend API is developed using **Java** and **Spring Boot**, with Hibernate 
 
 # 🌐 Frontend
 
-## Frontend Installation
+##  Frontend Installation
 To install and run the frontend application, follow these steps:
 
 1. Navigate to the frontend directory within the project.
