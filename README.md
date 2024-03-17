@@ -6,11 +6,11 @@ The backend API is developed using **Java** and **Spring Boot**, with Hibernate 
 
 ---
 ## Index
-- [**🌐 Frontend**](#Frontend)
+- [**🌐 Frontend**](#🌐-Frontend)
 	- [Installation](#frontend-installation)
 	- [Usage](#frontend-usage)
 	- [Features Display](#features-display)
-- [**⚙ Backend**](#Backend)
+- [**⚙ Backend**](#⚙-Backend)
 	- [Installation](#Installation)
 	- [ER Model](#ER-model)
 	- [API Endpoints](#api-endpoints)
